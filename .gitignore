@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+.dart_tool/
+.pub-cache/
+.packages
+*.apk
+*.ipa
+.env
+bin/
+obj/

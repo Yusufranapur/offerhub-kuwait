@@ -1,0 +1,39 @@
+{
+  "common": {
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "dashboard": "لوحة القيادة",
+    "profile": "ملف الشركة",
+    "branches": "الفروع",
+    "offers": "العروض",
+    "staff": "إدارة الموظفين",
+    "redemption": "الاسترداد",
+    "subscription": "الاشتراك",
+    "settings": "الإعدادات",
+    "save": "حفظ التغييرات",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء جديد",
+    "search": "بحث...",
+    "status": "الحالة",
+    "actions": "الإجراءات",
+    "welcome": "مرحباً بك"
+  },
+  "dashboard": {
+    "total_offers": "العروض النشطة",
+    "total_redemptions": "إجمالي الاستردادات",
+    "revenue_impact": "تأثير الإيرادات",
+    "active_branches": "الفروع النشطة",
+    "recent_activity": "النشاط الأخير",
+    "performance": "نظرة عامة على الأداء"
+  },
+  "offers": {
+    "title": "إدارة العروض",
+    "create": "إنشاء عرض",
+    "name": "اسم العرض",
+    "discount": "قيمة الخصم",
+    "valid_until": "صالح حتى",
+    "type": "نوع العرض"
+  }
+}

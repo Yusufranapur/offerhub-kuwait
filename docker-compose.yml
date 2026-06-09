@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  api:
+    image: offerhub-api
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=offerhub;Username=offerhub_user;Password=offerhub_password
+      - Redis__Configuration=redis:6379
+      - AWS__ServiceURL=http://localstack:4566
+    depends_on:
+      - postgres
+      - redis
+      - localstack
+    networks:
+      - offerhub-network
+
+  vendor-portal:
+    image: offerhub-vendor-portal
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.vendor-portal
+    ports:
+      - "3000:80"
+    networks:
+      - offerhub-network
+
+  admin-portal:
+    image: offerhub-admin-portal
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.admin-portal
+    ports:
+      - "3001:80"
+    networks:
+      - offerhub-network
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: offerhub_user
+      POSTGRES_PASSWORD: offerhub_password
+      POSTGRES_DB: offerhub
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - offerhub-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@offerhub.local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - offerhub-network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    networks:
+      - offerhub-network
+
+  localstack:
+    image: localstack/localstack:3.4.0
+    ports:
+      - "4566:4566"
+    environment:
+      - DEFAULT_REGION=me-south-1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - localstack_data:/var/lib/localstack
+    networks:
+      - offerhub-network
+
+networks:
+  offerhub-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+  redisdata:
+  localstack_data:

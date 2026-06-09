@@ -1,0 +1,24 @@
+databases:
+  - name: offerhub-db
+    databaseName: offerhub
+    user: offerhub_user
+    plan: free
+
+services:
+  - type: web
+    name: offerhub-api
+    env: docker
+    dockerfilePath: ./docker/Dockerfile.api
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: ConnectionStrings__DefaultConnection
+        fromDatabase:
+          name: offerhub-db
+          property: connectionString
+      - key: JwtSettings__Key
+        generateValue: true
+      - key: JwtSettings__Issuer
+        value: OfferHub
+      - key: JwtSettings__Audience
+        value: OfferHubApp
