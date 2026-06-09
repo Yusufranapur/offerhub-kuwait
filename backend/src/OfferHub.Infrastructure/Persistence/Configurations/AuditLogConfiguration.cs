@@ -1,11 +1,12 @@
+using OfferHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OfferHub.Infrastructure.Persistence.Configurations;
 
-public class AuditLogConfiguration : IEntityTypeConfiguration<object>
+public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
 {
-    public void Configure(EntityTypeBuilder<object> builder)
+    public void Configure(EntityTypeBuilder<AuditLog> builder)
     {
         // Replace 'object' with the actual domain entity 'AuditLog'
         builder.ToTable("AuditLogs");

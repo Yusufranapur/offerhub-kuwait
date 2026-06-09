@@ -1,0 +1,45 @@
+{
+  "common": {
+    "dashboard": "لوحة القيادة",
+    "vendors": "البائعين",
+    "offers": "العروض (إشراف)",
+    "categories": "التصنيفات",
+    "banners": "اللافتات الإعلانية",
+    "notifications": "الإشعارات",
+    "cms": "إدارة المحتوى",
+    "subscriptions": "الاشتراكات",
+    "analytics": "التحليلات",
+    "audit_logs": "سجلات التدقيق",
+    "users": "مستخدمي النظام",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "search": "بحث...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "approve": "موافقة",
+    "reject": "رفض",
+    "status": "الحالة",
+    "actions": "الإجراءات",
+    "all": "الكل",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "pending": "قيد الانتظار"
+  },
+  "dashboard": {
+    "total_vendors": "إجمالي البائعين",
+    "pending_offers": "عروض قيد الانتظار",
+    "active_users": "المستخدمين النشطين",
+    "revenue": "الإيرادات",
+    "recent_activity": "النشاط الأخير",
+    "system_health": "صحة النظام"
+  },
+  "auth": {
+    "welcome_back": "مرحباً بك مجدداً أيها المدير",
+    "sign_in_desc": "تسجيل الدخول للوصول إلى بوابة إدارة OfferHub",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "sign_in": "تسجيل الدخول"
+  }
+}

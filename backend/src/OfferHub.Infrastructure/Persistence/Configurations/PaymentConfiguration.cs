@@ -1,11 +1,12 @@
+using OfferHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OfferHub.Infrastructure.Persistence.Configurations;
 
-public class PaymentConfiguration : IEntityTypeConfiguration<object>
+public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
 {
-    public void Configure(EntityTypeBuilder<object> builder)
+    public void Configure(EntityTypeBuilder<Payment> builder)
     {
         // Replace 'object' with the actual domain entity 'Payment'
         builder.ToTable("Payments");

@@ -1,11 +1,12 @@
+using OfferHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OfferHub.Infrastructure.Persistence.Configurations;
 
-public class UserConfiguration : IEntityTypeConfiguration<object>
+public class UserConfiguration : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<object> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
         // Replace 'object' with the actual domain entity 'User'
         builder.ToTable("Users");

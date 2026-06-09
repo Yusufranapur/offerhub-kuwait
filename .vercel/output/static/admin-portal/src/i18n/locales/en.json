@@ -1,0 +1,45 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "vendors": "Vendors",
+    "offers": "Offers (Mod)",
+    "categories": "Categories",
+    "banners": "Banners",
+    "notifications": "Notifications",
+    "cms": "Content Management",
+    "subscriptions": "Subscriptions",
+    "analytics": "Analytics",
+    "audit_logs": "Audit Logs",
+    "users": "System Users",
+    "login": "Login",
+    "logout": "Logout",
+    "search": "Search...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "approve": "Approve",
+    "reject": "Reject",
+    "status": "Status",
+    "actions": "Actions",
+    "all": "All",
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending"
+  },
+  "dashboard": {
+    "total_vendors": "Total Vendors",
+    "pending_offers": "Pending Offers",
+    "active_users": "Active Users",
+    "revenue": "Revenue",
+    "recent_activity": "Recent Activity",
+    "system_health": "System Health"
+  },
+  "auth": {
+    "welcome_back": "Welcome Back, Admin",
+    "sign_in_desc": "Sign in to access the OfferHub Administration Portal",
+    "email": "Email Address",
+    "password": "Password",
+    "sign_in": "Sign In"
+  }
+}

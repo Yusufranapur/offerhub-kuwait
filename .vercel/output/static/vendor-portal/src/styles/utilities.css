@@ -1,0 +1,29 @@
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.font-bold { font-weight: 700; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mt-4 { margin-top: 1rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.text-muted { color: var(--color-text-muted); }
+.text-center { text-align: center; }
+.h-64 { height: 16rem; }
+.max-w-3xl { max-width: 48rem; }
+.cursor-pointer { cursor: pointer; }
+
+/* Tailwind-like colors that might be used inline */
+.text-emerald-400 { color: #34d399; }
+.text-teal-400 { color: #2dd4bf; }
+.hover\:text-teal-300:hover { color: #5eead4; }
+.hover\:underline:hover { text-decoration: underline; }
+
+/* Border utilities used */
+.border-dashed { border-style: dashed; }
+.border-2 { border-width: 2px; }
+.border-slate-700 { border-color: #334155; }
+.rounded-lg { border-radius: var(--radius-lg); }
+
+.text-gold { color: var(--color-gold); }
+.border-gold { border-color: var(--color-gold); }

@@ -1,0 +1,39 @@
+{
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "profile": "Business Profile",
+    "branches": "Branches",
+    "offers": "Offers",
+    "staff": "Staff Management",
+    "redemption": "Redemptions",
+    "subscription": "Subscription",
+    "settings": "Settings",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create New",
+    "search": "Search...",
+    "status": "Status",
+    "actions": "Actions",
+    "welcome": "Welcome back"
+  },
+  "dashboard": {
+    "total_offers": "Active Offers",
+    "total_redemptions": "Total Redemptions",
+    "revenue_impact": "Revenue Impact",
+    "active_branches": "Active Branches",
+    "recent_activity": "Recent Activity",
+    "performance": "Performance Overview"
+  },
+  "offers": {
+    "title": "Manage Offers",
+    "create": "Create Offer",
+    "name": "Offer Name",
+    "discount": "Discount Value",
+    "valid_until": "Valid Until",
+    "type": "Offer Type"
+  }
+}

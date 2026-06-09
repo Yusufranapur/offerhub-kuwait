@@ -14,6 +14,7 @@ import RedemptionPage from './pages/redemption/RedemptionPage';
 import SubscriptionPage from './pages/subscription/SubscriptionPage';
 import SettingsPage from './pages/settings/SettingsPage';
 import { useAuthStore } from './store/authStore';
+import VerificationPage from './pages/verification/VerificationPage';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated } = useAuthStore();
@@ -33,6 +34,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/verification" element={<ProtectedRoute><VerificationPage /></ProtectedRoute>} />
         
         <Route path="/" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Navigate to="/dashboard" replace />} />

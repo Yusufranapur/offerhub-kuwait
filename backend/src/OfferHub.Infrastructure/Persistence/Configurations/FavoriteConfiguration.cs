@@ -1,11 +1,12 @@
+using OfferHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OfferHub.Infrastructure.Persistence.Configurations;
 
-public class FavoriteConfiguration : IEntityTypeConfiguration<object>
+public class FavoriteConfiguration : IEntityTypeConfiguration<Favorite>
 {
-    public void Configure(EntityTypeBuilder<object> builder)
+    public void Configure(EntityTypeBuilder<Favorite> builder)
     {
         // Replace 'object' with the actual domain entity 'Favorite'
         builder.ToTable("Favorites");

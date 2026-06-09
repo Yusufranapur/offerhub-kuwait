@@ -1,11 +1,12 @@
+using OfferHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OfferHub.Infrastructure.Persistence.Configurations;
 
-public class SubscriptionPlanConfiguration : IEntityTypeConfiguration<object>
+public class SubscriptionPlanConfiguration : IEntityTypeConfiguration<SubscriptionPlan>
 {
-    public void Configure(EntityTypeBuilder<object> builder)
+    public void Configure(EntityTypeBuilder<SubscriptionPlan> builder)
     {
         // Replace 'object' with the actual domain entity 'SubscriptionPlan'
         builder.ToTable("SubscriptionPlans");

@@ -1,11 +1,12 @@
+using OfferHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OfferHub.Infrastructure.Persistence.Configurations;
 
-public class VendorConfiguration : IEntityTypeConfiguration<object>
+public class VendorConfiguration : IEntityTypeConfiguration<Vendor>
 {
-    public void Configure(EntityTypeBuilder<object> builder)
+    public void Configure(EntityTypeBuilder<Vendor> builder)
     {
         // Replace 'object' with the actual domain entity 'Vendor'
         builder.ToTable("Vendors");
